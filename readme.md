@@ -1,7 +1,7 @@
 ## Synopsis
 This is a simple restful api demonstration, using dummy data.
 
-## Dummy Data: App1
+## Dummy Data app_list: App1
     {
     id: '0032c47b-4a7b-4232-9cc3-6af718244ea8',
     title: "App1",
@@ -21,7 +21,7 @@ This is a simple restful api demonstration, using dummy data.
     }
 
 
-## Dummy Data: App2
+## Dummy Data app_list: App2
     {
     id: '0032c47b-4a7b-4232-9cc3-6af718244ea7',
     title: "App2",
@@ -40,7 +40,7 @@ This is a simple restful api demonstration, using dummy data.
         }
      }
 
-## Dummy Data: App3
+## Dummy Data app_list: App3
      {
      id: '0032c47b-4a7b-4232-9cc3-6af718244ea6',
      title: "App3",

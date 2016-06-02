@@ -4,7 +4,7 @@ This is a simple restful api demonstration, using dummy data.
 ## Dummy Data: App1
    {
     id: '0032c47b-4a7b-4232-9cc3-6af718244ea8'
-     }
+   }
 
 
 ## Dummy Data: App2

@@ -58,3 +58,14 @@ This is a simple restful api demonstration, using dummy data.
          name: 'Patrick Kinney'
        }
      }
+
+## User 1:
+     Karl Rohr
+
+## User 2:
+     Lindsay Hampton
+
+## User 3: 
+     Patrick Kinney
+
+

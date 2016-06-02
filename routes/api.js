@@ -70,6 +70,35 @@ module.exports = function(express){
     ]})
   });
 
+  router.get('/App1', function(req,res){
+    res.json({appInfo:[
+      {
+        id: '0032c47b-4a7b-4232-9cc3-6af718244ea8',
+       title: "App1",
+       description: "Description of app1",
+       artAssets:
+       [
+         {title: 'test', srcLink: 'http://www.google.com'},
+         {title: 'test2', srcLink: 'http://www.images.google.com'}
+       ],
+       releaseDate: "2016-06-15T22:29:20.000Z",
+       createdAt: "2016-05-15T22:29:20.000Z",
+       updatedAt: "2016-05-15T22:29:20.000Z",
+       user: {
+         id: "ae25e5a4-73db-4969-9f6c-acf8246b7faa",
+         name: 'Karl Rohr'
+       }
+     }
+    ]})
+  });
+
+  router.get('/karl', function(req, res){
+    res.json({userInfo:[
+      {name: 'Karl Rohr'}
+    ]
+    })
+  });
+
 
 
   return router;

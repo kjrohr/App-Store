@@ -71,7 +71,7 @@ This is a simple restful api demonstration, using dummy data.
 ## User 2: Lindsay Hampton - localhost:3000/api/users
      Lindsay Hampton
 
-## User 3: - localhost:3000/api/users 
+## User 3: Patrick Kinney  - localhost:3000/api/users 
      Patrick Kinney
 
 ## Dummy Data apps by ID - localhost:3000/api/apps/appIDGoesHeree

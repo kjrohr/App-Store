@@ -1,9 +1,7 @@
 ## Synopsis
 This is a simple restful api demonstration, using dummy data.
 
-## Dummy Data app_list: App1
-localhost:3000/api/apps   
-
+## Dummy Data app_list: App1 - localhost:3000/api/apps
  {
     id: '0032c47b-4a7b-4232-9cc3-6af718244ea8',
     title: "App1",
@@ -23,11 +21,7 @@ localhost:3000/api/apps
     }
 
 
-## Dummy Data app_list: App2
-localhost:3000/api/apps
-OR
-localhost:3000/api/apps/idGoesHere
-
+## Dummy Data app_list: App2 - localhost:3000/api/apps
     {
     id: '0032c47b-4a7b-4232-9cc3-6af718244ea7',
     title: "App2",
@@ -46,9 +40,7 @@ localhost:3000/api/apps/idGoesHere
         }
      }
 
-## Dummy Data app_list: App3
-localhost:3000/api/apps
-
+## Dummy Data app_list: App3 - localhost:3000/api/apps
      {
      id: '0032c47b-4a7b-4232-9cc3-6af718244ea6',
      title: "App3",
@@ -67,17 +59,12 @@ localhost:3000/api/apps
        }
      }
 
-## User 1:
-localhost:3000/api/users
-OR
-localhost:3000/api/users/idGoesHere
+## User 1: Karl Rohr - localhost:3000/api/users
      Karl Rohr
 
-## User 2:
-localhost:3000/api/users
+## User 2: Lindsay Hampton - localhost:3000/api/users
      Lindsay Hampton
 
-## User 3: 
-localhost:3000/api/users
+## User 3: - localhost:3000/api/users 
      Patrick Kinney
 

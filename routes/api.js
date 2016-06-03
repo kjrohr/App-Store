@@ -9,7 +9,7 @@ module.exports = function(express){
   });
 // /api/app_list route dummy data
 // An object that holds an array of child objects
-  router.get('/app_list', function(req, res){
+  router.get('/apps', function(req, res){
     res.json({applist:
       [
         {
@@ -77,7 +77,7 @@ module.exports = function(express){
 
  // /api/app/idgoeshere
  // Set up the routes to accept ids but spit out dummy data
-  router.get('/app/:id', function(req,res){
+  router.get('/apps/:id', function(req,res){
     res.json({
       id: '0032c47b-4a7b-4232-9cc3-6af718244ea7',
      title: "App2",
@@ -99,7 +99,7 @@ module.exports = function(express){
   });
  // /api/users/idgoeshere
  // Set up the route to accept id btu spit out dummy data
-  router.get('/user/:id', function(req, res){
+  router.get('/users/:id', function(req, res){
     res.json({name: 'Karl Rohr'});
   });
 

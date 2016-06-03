@@ -1,7 +1,7 @@
 ## Synopsis
 This is a simple restful api demonstration, using dummy data.
 
-## Dummy Data app_list: App1 - localhost:3000/api/apps
+## Dummy Data apps: App1 - localhost:3000/api/apps
 ``` javascript
   {
     id: '0032c47b-4a7b-4232-9cc3-6af718244ea8',
@@ -22,7 +22,7 @@ This is a simple restful api demonstration, using dummy data.
   }
 ```
 
-## Dummy Data app_list: App2 - localhost:3000/api/apps
+## Dummy Data apps: App2 - localhost:3000/api/apps
 ``` javascript
     {
     id: '0032c47b-4a7b-4232-9cc3-6af718244ea7',
@@ -43,7 +43,7 @@ This is a simple restful api demonstration, using dummy data.
      }
 ```
 
-## Dummy Data app_list: App3 - localhost:3000/api/apps
+## Dummy Data apps: App3 - localhost:3000/api/apps
 
 ``` javascript
      {
@@ -74,3 +74,30 @@ This is a simple restful api demonstration, using dummy data.
 ## User 3: - localhost:3000/api/users 
      Patrick Kinney
 
+## Dummy Data apps by ID - localhost:3000/api/apps/appIDGoesHeree
+
+``` javascript
+
+{
+    id: '0032c47b-4a7b-4232-9cc3-6af718244ea7',
+    title: "App2",
+    description: "Description of app2",
+    artAssets:
+        [
+          {title: 'test', srcLink: 'http://www.google.com'},
+          {title: 'test2', srcLink: 'http://www.images.google.com'}
+        ],
+    releaseDate: "2016-06-15T22:29:20.000Z",
+    createdAt: "2016-05-15T22:29:20.000Z",
+    updatedAt: "2016-05-15T22:29:20.000Z",
+    user: {
+          id: "ae25e5a4-73db-4969-9f6c-acf8246b7fab",
+          name: 'Lindsay Hampton'
+        }
+}
+
+
+```
+
+## User by id - localhost:3000/api/users/userIDGoesHere
+    Karl Rohr

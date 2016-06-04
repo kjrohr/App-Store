@@ -18,4 +18,9 @@ describe('API', function(){
   it('/api/ should return home: true', function(done){
     request(server).get('/api/').set('Accept', 'application/json').expect('Content-type', /json/).expect(200, {home: 'true'}, done);
   });
+
+  it('/api/users/id should return a user object with Karl Rohr', function(done){
+    var fakeUserId = 347;
+    request(server).get('/api/users/' + fakeUserId).set('Accept', 'application/json').expect('Content-type', /json/).expect(200, {name: 'Karl Rohr'}, done);
+  });
 });

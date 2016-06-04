@@ -77,7 +77,7 @@ module.exports = function(express){
 
  // /api/app/idgoeshere
  // Set up the routes to accept ids but spit out dummy data
-  router.get('/app/:id', function(req,res){
+  router.get('/apps/:id', function(req,res){
     res.json({
       id: '0032c47b-4a7b-4232-9cc3-6af718244ea7',
      title: "App2",

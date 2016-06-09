@@ -1,7 +1,7 @@
 ## Synopsis
 This is a simple restful api demonstration, using dummy data.
 
-## Dummy Data apps: App1 - localhost:3000/api/apps
+## Dummy Data apps: App1 - /api/apps
 ``` javascript
   {
     id: '0032c47b-4a7b-4232-9cc3-6af718244ea8',
@@ -22,7 +22,7 @@ This is a simple restful api demonstration, using dummy data.
   }
 ```
 
-## Dummy Data apps: App2 - localhost:3000/api/apps
+## Dummy Data apps: App2 - /api/apps
 ``` javascript
     {
     id: '0032c47b-4a7b-4232-9cc3-6af718244ea7',
@@ -43,7 +43,7 @@ This is a simple restful api demonstration, using dummy data.
      }
 ```
 
-## Dummy Data apps: App3 - localhost:3000/api/apps
+## Dummy Data apps: App3 - /api/apps
 
 ``` javascript
      {
@@ -65,16 +65,7 @@ This is a simple restful api demonstration, using dummy data.
      }
 ```
 
-## User 1: Karl Rohr - localhost:3000/api/users
-     Karl Rohr
-
-## User 2: Lindsay Hampton - localhost:3000/api/users
-     Lindsay Hampton
-
-## User 3: Patrick Kinney  - localhost:3000/api/users 
-     Patrick Kinney
-
-## Dummy Data apps by ID - localhost:3000/api/apps/appIDGoesHeree
+## Dummy Data apps by ID - /api/apps/appIDGoesHeree
 
 ``` javascript
 
@@ -99,5 +90,54 @@ This is a simple restful api demonstration, using dummy data.
 
 ```
 
-## User by id - localhost:3000/api/users/userIDGoesHere
-    Karl Rohr
+## All Users - /api/users
+     ``` javascript
+     [
+ {
+ id: 3,
+ name: "Lindsay Hampton",
+ age: 22,
+ hobby: "Gaming",
+ createdAt: "2016-06-09T01:36:20.000Z",
+ updatedAt: "2016-06-09T02:26:14.000Z"
+ },
+ {
+ id: 5,
+ name: "Karl Rohr",
+ age: 25,
+ hobby: "Gaming",
+ createdAt: "2016-06-09T02:42:10.000Z",
+ updatedAt: "2016-06-09T02:42:10.000Z"
+ },
+ {
+ id: 6,
+ name: "Patrick Kinney",
+ age: 25,
+ hobby: "Gaming",
+ createdAt: "2016-06-09T02:42:28.000Z",
+ updatedAt: "2016-06-09T02:42:28.000Z"
+ },
+ {
+ id: 10,
+ name: "Chris Chapman",
+ age: 29,
+ hobby: "Paint ball",
+ createdAt: "2016-06-09T21:30:08.000Z",
+ updatedAt: "2016-06-09T21:30:08.000Z"
+ }
+ ]
+     ```
+
+## User by ID example: Lindsay Hampton - /api/users/3
+### Replace the number 3 with the id of the user you wish to look up.
+
+``` javascript
+{
+id: 3,
+name: "Lindsay Hampton",
+age: 22,
+hobby: "Gaming",
+createdAt: "2016-06-09T01:36:20.000Z",
+updatedAt: "2016-06-09T02:26:14.000Z"
+}
+```

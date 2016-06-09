@@ -1,5 +1,5 @@
 ## Synopsis
-This is a simple restful api demonstration, using dummy data. Basic CRUD example works with users now!
+This is a simple restful api demonstration, using dummy data. Basic CRUD example works with users and apps!
 
 ## All apps: App1 - /api/apps
 ``` javascript
@@ -35,71 +35,17 @@ updatedAt: "2016-06-09T22:07:49.000Z"
 ]
 ```
 
-## Dummy Data apps: App2 - /api/apps
-``` javascript
-    {
-    id: '0032c47b-4a7b-4232-9cc3-6af718244ea7',
-    title: "App2",
-    description: "Description of app2",
-    artAssets:
-        [
-          {title: 'test', srcLink: 'http://www.google.com'},
-          {title: 'test2', srcLink: 'http://www.images.google.com'}
-        ],
-    releaseDate: "2016-06-15T22:29:20.000Z",
-    createdAt: "2016-05-15T22:29:20.000Z",
-    updatedAt: "2016-05-15T22:29:20.000Z",
-    user: {
-          id: "ae25e5a4-73db-4969-9f6c-acf8246b7fab",
-          name: 'Lindsay Hampton'
-        }
-     }
-```
-
-## Dummy Data apps: App3 - /api/apps
-
-``` javascript
-     {
-     id: '0032c47b-4a7b-4232-9cc3-6af718244ea6',
-     title: "App3",
-     description: "Description of app3",
-     artAssets:
-       [
-         {title: 'test', srcLink: 'http://www.google.com'},
-         {title: 'test2', srcLink: 'http://www.images.google.com'}
-       ],
-     releaseDate: "2016-06-15T22:29:20.000Z",
-     createdAt: "2016-05-15T22:29:20.000Z",
-     updatedAt: "2016-05-15T22:29:20.000Z",
-     user: {
-         id: "ae25e5a4-73db-4969-9f6c-acf8246b7fac",
-         name: 'Patrick Kinney'
-       }
-     }
-```
-
-## Dummy Data apps by ID - /api/apps/appIDGoesHeree
-
+## App by ID - /api/apps/1
+### Replace the number 1 with the id of the app you wish to look up.
 ``` javascript
 
 {
-    id: '0032c47b-4a7b-4232-9cc3-6af718244ea7',
-    title: "App2",
-    description: "Description of app2",
-    artAssets:
-        [
-          {title: 'test', srcLink: 'http://www.google.com'},
-          {title: 'test2', srcLink: 'http://www.images.google.com'}
-        ],
-    releaseDate: "2016-06-15T22:29:20.000Z",
-    createdAt: "2016-05-15T22:29:20.000Z",
-    updatedAt: "2016-05-15T22:29:20.000Z",
-    user: {
-          id: "ae25e5a4-73db-4969-9f6c-acf8246b7fab",
-          name: 'Lindsay Hampton'
-        }
+id: 1,
+name: "Doom",
+code: "id",
+createdAt: "2016-06-09T22:06:01.000Z",
+updatedAt: "2016-06-09T22:06:01.000Z"
 }
-
 
 ```
 

@@ -3,23 +3,36 @@ This is a simple restful api demonstration, using dummy data. Basic CRUD example
 
 ## All apps: App1 - /api/apps
 ``` javascript
-  {
-    id: '0032c47b-4a7b-4232-9cc3-6af718244ea8',
-    title: "App1",
-    description: "Description of app1",
-    artAssets:
-       [
-         {title: 'test', srcLink: 'http://www.google.com'},
-         {title: 'test2', srcLink: 'http://www.images.google.com'}
-       ],
-     releaseDate: "2016-06-15T22:29:20.000Z",
-     createdAt: "2016-05-15T22:29:20.000Z",
-     updatedAt: "2016-05-15T22:29:20.000Z",
-     user: {
-        id: "ae25e5a4-73db-4969-9f6c-acf8246b7faa",
-         name: 'Karl Rohr'
-       }
-  }
+[
+{
+id: 1,
+name: "Doom",
+code: "id",
+createdAt: "2016-06-09T22:06:01.000Z",
+updatedAt: "2016-06-09T22:06:01.000Z"
+},
+{
+id: 2,
+name: "Starcraft 2",
+code: "blizz",
+createdAt: "2016-06-09T22:06:12.000Z",
+updatedAt: "2016-06-09T22:06:12.000Z"
+},
+{
+id: 4,
+name: "RAGE",
+code: "id",
+createdAt: "2016-06-09T22:07:37.000Z",
+updatedAt: "2016-06-09T22:07:37.000Z"
+},
+{
+id: 5,
+name: "Skyrim",
+code: "beth",
+createdAt: "2016-06-09T22:07:49.000Z",
+updatedAt: "2016-06-09T22:07:49.000Z"
+}
+]
 ```
 
 ## Dummy Data apps: App2 - /api/apps

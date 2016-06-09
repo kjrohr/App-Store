@@ -2,13 +2,15 @@
 var express = require('express');
 
 // Sets body_parser to the module body-parser
-var body_pareser = require('body-parser');
+var body_parser = require('body-parser');
 
 // Sets app to the express
 var app = express();
 
 // Sets port to 3000
 var port = 3000;
+
+app.use(body_parser.json());
 
 // Tells the app to have a requirement of /api and then require the api.js file and pass it express
 app.use('/api', require('./routes/api.js')(express));

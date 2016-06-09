@@ -8,14 +8,16 @@ module.exports = (express) => {
       res.status(500).json(err);
     }, (data) => {
       res.status(200).json(data);
+
     });
   });
 
   // Read One
   router.get('/users/:id', (req, res) => {
     // URL id will override any preexisting id
-    req.body.id = req.params.id;
-    user.find(req.body, (err) => {
+    var x = {};
+    x.id = req.params.id;
+    user.find(x, (err) => {
       res.status(500).json(err);
     }, (data) => {
       res.status(200).json(data);
@@ -46,6 +48,7 @@ module.exports = (express) => {
 
   // Create User
   router.post('/users', (req, res) => {
+    console.log(req.body);
     user.create(req.body, (err) => {
       res.status(500).json(err);
     }, (data) => {

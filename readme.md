@@ -92,7 +92,7 @@ This is a simple restful api demonstration, using dummy data.
 
 ## All Users - /api/users
 ``` javascript
-     [
+[
  {
  id: 3,
  name: "Lindsay Hampton",
@@ -125,7 +125,7 @@ This is a simple restful api demonstration, using dummy data.
  createdAt: "2016-06-09T21:30:08.000Z",
  updatedAt: "2016-06-09T21:30:08.000Z"
  }
- ]
+]
 ```
 
 ## User by ID example: Lindsay Hampton - /api/users/3

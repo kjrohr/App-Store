@@ -1,4 +1,4 @@
-const user = require('../src/models/user');
+const user = require('../models/user');
 module.exports = (express) => {
   const router = express.Router();
 

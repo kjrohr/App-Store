@@ -11,7 +11,7 @@ var app = express();
 var port = 3000;
 
 // Tells the app to have a requirement of /api and then require the api.js file and pass it express
-app.use('/api', require('../routes/api.js')(express));
+app.use('/api', require('./routes/api.js')(express));
 
 
 // What the server does while it's running and initialized

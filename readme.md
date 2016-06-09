@@ -1,5 +1,5 @@
 ## Synopsis
-This is a simple restful api demonstration, using dummy data.
+This is a simple restful api demonstration, using dummy data. Basic CRUD example works with users now!
 
 ## Dummy Data apps: App1 - /api/apps
 ``` javascript

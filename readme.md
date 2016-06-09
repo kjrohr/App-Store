@@ -100,3 +100,9 @@ createdAt: "2016-06-09T01:36:20.000Z",
 updatedAt: "2016-06-09T02:26:14.000Z"
 }
 ```
+## DEBUGGING
+### Turn on DEBUGGING
+When starting the development server use DEBUG=true nodemon src/server.js
+
+### Without DEBUGGING
+nodemon src/server.js

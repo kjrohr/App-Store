@@ -91,7 +91,7 @@ This is a simple restful api demonstration, using dummy data.
 ```
 
 ## All Users - /api/users
-     ``` javascript
+``` javascript
      [
  {
  id: 3,
@@ -126,7 +126,7 @@ This is a simple restful api demonstration, using dummy data.
  updatedAt: "2016-06-09T21:30:08.000Z"
  }
  ]
-     ```
+```
 
 ## User by ID example: Lindsay Hampton - /api/users/3
 ### Replace the number 3 with the id of the user you wish to look up.

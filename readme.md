@@ -1,7 +1,7 @@
 ## Synopsis
 This is a simple restful api demonstration, using dummy data. Basic CRUD example works with users now!
 
-## Dummy Data apps: App1 - /api/apps
+## All apps: App1 - /api/apps
 ``` javascript
   {
     id: '0032c47b-4a7b-4232-9cc3-6af718244ea8',

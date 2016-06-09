@@ -1,15 +1,15 @@
 const db = require('./db.js');
 
 exports.create = (payload, err, success) => {
-  db.course.create(payload).then(success).catch(err);
+  db.apps.create(payload).then(success).catch(err);
 };
 
 exports.findAll = (err, success) => {
-  db.course.findAll().then(success).catch(err);
+  db.apps.findAll().then(success).catch(err);
 };
 
 exports.find = (payload, err, success) => {
-  db.course.find({
+  db.apps.find({
     where: {
       id: payload.id,
     },
@@ -22,7 +22,7 @@ exports.find = (payload, err, success) => {
 };
 
 exports.update = (payload, err, success) => {
-  db.course.find({
+  db.apps.find({
     where: {
       id: payload.id,
     },
@@ -33,7 +33,7 @@ exports.update = (payload, err, success) => {
 };
 
 exports.destroy = (payload, err, success) => {
-  db.course.destroy({
+  db.apps.destroy({
     where: {
       id: payload.id,
     },

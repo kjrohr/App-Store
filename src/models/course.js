@@ -1,4 +1,5 @@
 const db = require('./db.js');
+const util = require('../../lib/util');
 
 exports.create = (payload, err, success) => {
   db.apps.create(payload).then(success).catch(err);

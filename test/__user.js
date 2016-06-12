@@ -37,6 +37,8 @@ describe('Users', () => {
   });
 
   it('Should be able to create.', () => {
+    // Rule needs to be made about this
+    // Allowed to supress this
     expect(testUser.id).to.not.be.null;
   });
 

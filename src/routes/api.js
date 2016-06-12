@@ -18,8 +18,8 @@ module.exports = (express) => {
   // Read One
   router.get('/users/:id', (req, res) => {
     // URL id will override any preexisting id
-    let x = { id: 0 };
-    x.id = req.params.id;
+    const x = { id: req.params.id };
+    // x.id = req.params.id;
     user.find(x, (err) => {
       res.status(500).json(err);
       util.debug('/users/:id Read one user by id error', err);
@@ -32,8 +32,8 @@ module.exports = (express) => {
   // Delete
   router.delete('/users/:id', (req, res) => {
     // URL id will override any preexisting id
-    req.body.id = req.params.id;
-    user.destroy(req.body, (err) => {
+    const x = { id: req.params.id };
+    user.destroy(x, (err) => {
       res.status(500).json(err);
       util.debug('/users/:id Delete one user by id error', err);
     }, (data) => {
@@ -45,8 +45,8 @@ module.exports = (express) => {
   // Update
   router.post('/users/:id', (req, res) => {
     // URL id will override any preexisting id
-    req.body.id = req.params.id;
-    user.update(req.body, (err) => {
+    const x = { id: req.params.id };
+    user.update(x, (err) => {
       res.status(500).json(err);
       util.debug('/users/:id Update one user by id error', err);
     }, (data) => {
@@ -80,8 +80,7 @@ module.exports = (express) => {
   // Read One
   router.get('/apps/:id', (req, res) => {
     // URL id will override any preexisting id
-    var x = {};
-    x.id = req.params.id;
+    const x = { id: req.params.id };
     apps.find(x, (err) => {
       res.status(500).json(err);
       util.debug('/apps/:id Read one app by id error', err);
@@ -94,8 +93,8 @@ module.exports = (express) => {
   // Delete
   router.delete('/apps/:id', (req, res) => {
     // URL id will override any preexisting id
-    req.body.id = req.params.id;
-    apps.destroy(req.body, (err) => {
+    const x = { id: req.params.id };
+    apps.destroy(x, (err) => {
       res.status(500).json(err);
       util.debug('/apps/:id Delete app by id error', err);
     }, (data) => {
@@ -107,8 +106,8 @@ module.exports = (express) => {
   // Update
   router.post('/apps/:id', (req, res) => {
     // URL id will override any preexisting id
-    req.body.id = req.params.id;
-    apps.update(req.body, (err) => {
+    const x = { id: req.params.id };
+    apps.update(x, (err) => {
       res.status(500).json(err);
       util.debug('/apps/:id Update user by id error', err);
     }, (data) => {

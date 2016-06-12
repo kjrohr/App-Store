@@ -1,7 +1,10 @@
 {
   "name": "appstore",
   "version": "1.0.0",
-  "description": "",
+  "repository": {
+    "private": true
+  },
+  "description": "This is a simple restful api demonstration, using dummy data. Basic CRUD example works with users and apps!",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
@@ -26,5 +29,8 @@
     "expect": "^1.20.1",
     "mocha": "^2.5.3",
     "supertest": "^1.2.0"
+  },
+  "directories": {
+    "test": "test"
   }
 }

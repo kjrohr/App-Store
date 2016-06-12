@@ -21,7 +21,7 @@ app.use('/api', require('./routes/api.js')(express));
 
 
 // What the server does while it's running and initialized
-const server = app.listen(port, function(){
+const server = app.listen(port, () => {
   util.debug('Server is running on port: ', port);
 });
 

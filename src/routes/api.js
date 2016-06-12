@@ -45,7 +45,7 @@ module.exports = (express) => {
   // Update
   router.post('/users/:id', (req, res) => {
     // URL id will override any preexisting id
-    const x = { id: req.params.id };
+    const x = { id: req.params.id, name: req.body.name, hobby: req.body.hobby };
     user.update(x, (err) => {
       res.status(500).json(err);
       util.debug('/users/:id Update one user by id error', err);
@@ -106,7 +106,8 @@ module.exports = (express) => {
   // Update
   router.post('/apps/:id', (req, res) => {
     // URL id will override any preexisting id
-    const x = { id: req.params.id };
+    const x = { id: req.params.id, name: req.body.name, hobby: req.body.hobby };
+
     apps.update(x, (err) => {
       res.status(500).json(err);
       util.debug('/apps/:id Update user by id error', err);

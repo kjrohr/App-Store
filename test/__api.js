@@ -1,6 +1,19 @@
 var expect = require('expect');
-
 var request = require('supertest');
+
+describe('User Model', () => {
+  before(() => {
+    const mockUser = {
+      name: 'Cpt. Hydra',
+      age: 23,
+      hobby: 'Hailing',
+    };
+    user.create(mockUser, (error) => {
+      util.debug('Error creating mock user', error);
+    });
+  });
+});
+
 describe('API', function(){
   var server;
   beforeEach( function(){

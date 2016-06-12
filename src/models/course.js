@@ -3,7 +3,7 @@ const util = require('../../lib/util');
 
 exports.create = (payload, err, success) => {
   db.apps.create(payload).then(success).catch(err);
-  util.debug("Model - Course: ", payload);
+  util.debug('Model - Course: ', payload);
 };
 
 exports.findAll = (err, success) => {
@@ -21,7 +21,7 @@ exports.find = (payload, err, success) => {
       nested: true,
     }],
   }).then(success).catch(err);
-  util.debug("Model - Course: ", payload);
+  util.debug('Model - Course: ', payload);
 };
 
 exports.update = (payload, err, success) => {
@@ -33,7 +33,7 @@ exports.update = (payload, err, success) => {
   }).then((existingData) => {
     existingData.updateAttributes(payload).then(success).catch(err);
   }).catch(err);
-  util.debug("Model - Course: ", payload);
+  util.debug('Model - Course: ', payload);
 };
 
 exports.destroy = (payload, err, success) => {
@@ -42,5 +42,5 @@ exports.destroy = (payload, err, success) => {
       id: payload.id,
     },
   }).then(success).catch(err);
-  util.debug("Model - Course: ", payload);
+  util.debug('Model - Course: ', payload);
 };

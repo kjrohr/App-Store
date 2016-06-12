@@ -12,14 +12,13 @@ module.exports = (express) => {
     }, (data) => {
       res.status(200).json(data);
       util.debug('/users Read all success', data);
-
     });
   });
 
   // Read One
   router.get('/users/:id', (req, res) => {
     // URL id will override any preexisting id
-    var x = {};
+    let x = { id: 0 };
     x.id = req.params.id;
     user.find(x, (err) => {
       res.status(500).json(err);
@@ -58,7 +57,6 @@ module.exports = (express) => {
 
   // Create User
   router.post('/users', (req, res) => {
-    console.log(req.body);
     user.create(req.body, (err) => {
       res.status(500).json(err);
       util.debug('/users Create user error', err);
@@ -89,7 +87,7 @@ module.exports = (express) => {
       util.debug('/apps/:id Read one app by id error', err);
     }, (data) => {
       res.status(200).json(data);
-      util.debug('/apps/:id Read one app by id success', data)
+      util.debug('/apps/:id Read one app by id success', data);
     });
   });
 
@@ -121,7 +119,6 @@ module.exports = (express) => {
 
   // Create User
   router.post('/apps', (req, res) => {
-    console.log(req.body);
     apps.create(req.body, (err) => {
       res.status(500).json(err);
       util.debug('/apps Create app error', err);

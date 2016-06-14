@@ -1,5 +1,5 @@
 const user = require('../models/user');
-const apps = require('../models/course');
+const apps = require('../models/apps');
 const util = require('../../lib/util');
 module.exports = (express) => {
   const router = express.Router();

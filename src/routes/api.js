@@ -18,9 +18,9 @@ module.exports = (express) => {
   // Read One
   router.get('/users/:id', (req, res) => {
     // URL id will override any preexisting id
-    const x = { id: req.params.id };
+    const userData = { id: req.params.id };
     // x.id = req.params.id;
-    user.find(x, (err) => {
+    user.find(userData, (err) => {
       res.status(500).json(err);
       util.debug('/users/:id Read one user by id error', err);
     }, (data) => {
@@ -32,8 +32,8 @@ module.exports = (express) => {
   // Delete
   router.delete('/users/:id', (req, res) => {
     // URL id will override any preexisting id
-    const x = { id: req.params.id };
-    user.destroy(x, (err) => {
+    const userData = { id: req.params.id };
+    user.destroy(userData, (err) => {
       res.status(500).json(err);
       util.debug('/users/:id Delete one user by id error', err);
     }, (data) => {
@@ -45,8 +45,8 @@ module.exports = (express) => {
   // Update
   router.post('/users/:id', (req, res) => {
     // URL id will override any preexisting id
-    const x = { id: req.params.id, name: req.body.name, hobby: req.body.hobby };
-    user.update(x, (err) => {
+    const userData = { id: req.params.id, name: req.body.name, hobby: req.body.hobby };
+    user.update(userData, (err) => {
       res.status(500).json(err);
       util.debug('/users/:id Update one user by id error', err);
     }, (data) => {
@@ -80,8 +80,8 @@ module.exports = (express) => {
   // Read One
   router.get('/apps/:id', (req, res) => {
     // URL id will override any preexisting id
-    const x = { id: req.params.id };
-    apps.find(x, (err) => {
+    const appData = { id: req.params.id };
+    apps.find(appData, (err) => {
       res.status(500).json(err);
       util.debug('/apps/:id Read one app by id error', err);
     }, (data) => {
@@ -93,8 +93,8 @@ module.exports = (express) => {
   // Delete
   router.delete('/apps/:id', (req, res) => {
     // URL id will override any preexisting id
-    const x = { id: req.params.id };
-    apps.destroy(x, (err) => {
+    const appData = { id: req.params.id };
+    apps.destroy(appData, (err) => {
       res.status(500).json(err);
       util.debug('/apps/:id Delete app by id error', err);
     }, (data) => {
@@ -106,9 +106,9 @@ module.exports = (express) => {
   // Update
   router.post('/apps/:id', (req, res) => {
     // URL id will override any preexisting id
-    const x = { id: req.params.id, name: req.body.name, hobby: req.body.hobby };
+    const appData = { id: req.params.id, name: req.body.name, hobby: req.body.hobby };
 
-    apps.update(x, (err) => {
+    apps.update(appData, (err) => {
       res.status(500).json(err);
       util.debug('/apps/:id Update user by id error', err);
     }, (data) => {

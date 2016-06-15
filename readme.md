@@ -100,9 +100,36 @@ createdAt: "2016-06-09T01:36:20.000Z",
 updatedAt: "2016-06-09T02:26:14.000Z"
 }
 ```
+# Development Portion
+
+## Dev Dependencies
+npm install chai dotenv mocha eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react expect supertest
+
 ## DEBUGGING
+
 ### Turn on DEBUGGING
 When starting the development server use DEBUG=true nodemon src/server.js
 
 ### Without DEBUGGING
 nodemon src/server.js
+
+## Mocha Usage
+In terminal type in mocha or mocha filepath for the test you want to run.
+If everything is working perfectly it shall output...
+API
+    ✓ /api/users/id should return a user object with Lindsay (53ms)
+
+  Apps
+    ✓ Should be able to read all apps.
+    ✓ Should be able to read one app
+    ✓ Should be able to create an app.
+    ✓ Should be able to update an app.
+    ✓ Should be able to delete an app.
+
+  Users
+    ✓ Should be able to read all.
+    ✓ Should be able to read one
+    ✓ Should be able to create.
+    ✓ Should be able to update.
+    ✓ Should be able to delete.
+If a unit test fails it will display what broke and where.

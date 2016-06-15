@@ -1,5 +1,8 @@
+// Variable Sequelize set to import the sequelize module
 const Sequelize = require('sequelize');
+// Requiring the dotenv.config() method of the dotenv module
 require('dotenv').config();
+// Sequelize handling the database
 const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
   host: process.env.DB_HOST,
   dialect: process.env.DB_SCHEMA,
@@ -11,7 +14,8 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
   },
   logging: false,
 });
-
+// Defining the user table with a name colume, age colume
+// and hobby colume
 const user = sequelize.define('user', {
   name: {
     type: Sequelize.STRING,
@@ -24,6 +28,7 @@ const user = sequelize.define('user', {
   },
 });
 
+// Defining the apps table with a name colume, and code colume
 const apps = sequelize.define('apps', {
   name: {
     type: Sequelize.STRING,
@@ -33,12 +38,18 @@ const apps = sequelize.define('apps', {
   },
 });
 
+// So far the foreign key still breaks my stuff
+
 // apps.hasMany(user, {
 //   foreignKey: 'courseID',
 // });
 
+// Syncs to the db
 sequelize.sync();
 
+// Exports the sequenlize
 exports.sequelize = sequelize;
+// Exports user table
 exports.user = user;
+// Exports apps table
 exports.apps = apps;

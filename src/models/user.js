@@ -8,7 +8,7 @@ exports.create = (payload, err, success) => {
 
 exports.findAll = (err, success) => {
   db.user.findAll().then(success).catch(err);
-  util.debug('Model - User - Read All', db.user.findAll());
+  util.debug('Model - User - Read All', success);
 };
 
 exports.find = (payload, err, success) => {

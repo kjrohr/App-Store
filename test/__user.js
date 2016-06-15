@@ -18,21 +18,21 @@ describe('Users', () => {
     });
   });
 
-  it('Should be able to one read.', (done) => {
+  it('Should be able to read all.', (done) => {
     user.findAll((error) => {
       util.debug('Error reading all users', error);
     }, (allUsers) => {
-      expect(allUsers.length).to.be.above(1);
+      expect(allUsers.length).to.be.above(0);
       done();
     });
   });
 
-  it('Should be able to read all', () => {
-    testUser = { id: 1000 };
+  it('Should be able to read one', (done) => {
     user.find(testUser, (error) => {
       util.debug('Error reading user', error);
     }, (oneUser) => {
       expect(oneUser.id).to.be.equal(testUser.id);
+      done();
     });
   });
 
@@ -42,7 +42,7 @@ describe('Users', () => {
     expect(testUser.id).to.not.be.null;
   });
 
-  it('Should be able to update.', () => {
+  it('Should be able to update.', (done) => {
     const updateInfo = {
       id: testUser.id,
       name: 'Kevin',
@@ -51,16 +51,16 @@ describe('Users', () => {
     };
     user.update(updateInfo, (err) => {
       util.debug('User failed to update', err);
-    }, (updatedDbUser, done) => {
+    }, (updatedDbUser) => {
       expect(updatedDbUser.name).to.be.equal(updateInfo.name);
       done();
     });
   });
 
-  it('Should be able to delete.', () => {
+  it('Should be able to delete.', (done) => {
     user.destroy(testUser, (err) => {
       util.debug('Unable to delete testuser', err);
-    }, (responseFromDestroy, done) => {
+    }, (responseFromDestroy) => {
       expect(responseFromDestroy).to.be.equal(1);
       done();
     });

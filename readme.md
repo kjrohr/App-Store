@@ -116,7 +116,8 @@ nodemon src/server.js
 ## Mocha Usage
 In terminal type in mocha or mocha filepath for the test you want to run.
 If everything is working perfectly it shall output...
-API
+
+  API
     ✓ /api/users/id should return a user object with Lindsay (53ms)
 
   Apps

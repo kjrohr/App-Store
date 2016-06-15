@@ -1,6 +1,11 @@
 // const expect = require('expect');
 const request = require('supertest');
-
+// const routes = [
+//   { title: '/api/users should return all users', route: '/api/users', status: 200 },
+//   { title: '/api/users/3 should return Lindsay', route: '/api/users/3', status: 200 },
+//   { title: '/api/apps should return all apps', route: '/api/apps', status: 200 },
+//   { title: '/api/apps/1', route: '/api/apps/1', status: 200 },
+// ];
 describe('API', () => {
   let server;
   beforeEach(() => {
@@ -10,19 +15,21 @@ describe('API', () => {
   afterEach(() => {
     server.close();
   });
-   // it() is bullet points 'actual test'
-  it('Should load', (done) => {
-    request(server).get('/api/').set('Accept', 'application/json')
-    .expect('Content-type', /json/, done);
-  });
 
-  it('/api/ should return home: true', (done) => {
-    request(server)
-    .get('/api/')
-    .set('Accept', 'application/json')
-    .expect('Content-type', /json/)
-    .expect(200, { home: 'true' }, done);
-  });
+  // Don't have a route for just /api
+  //  // it() is bullet points 'actual test'
+  // it('Should load', (done) => {
+  //   request(server).get('/api/').set('Accept', 'application/json')
+  //   .expect('Content-type', /json/, done);
+  // });
+
+  // it('/api/ should return home: true', (done) => {
+  //   request(server)
+  //   .get('/api/')
+  //   .set('Accept', 'application/json')
+  //   .expect('Content-type', /json/)
+  //   .expect(200, { home: 'true' }, done);
+  // });
 
   it('/api/users/id should return a user object with Lindsay', (done) => {
     const fakeUserId = 3;
@@ -39,4 +46,12 @@ describe('API', () => {
       updatedAt: '2016-06-12T04:46:52.000Z',
     }, done);
   });
+
+  // Dynamic Route Api Unit Testing Inbound
+  // for (let index = 0; index < routes.length; index++) {
+  //   it(routes[index].title, (done) => {
+  //     request(server)
+  //     .get(routes[index].route)
+  //   });
+  // }
 });

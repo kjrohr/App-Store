@@ -11,7 +11,7 @@ module.exports = (express) => {
       util.debug('/users Read All error', err);
     }, (data) => {
       res.status(200).json(data);
-      util.debug('/users Read all success', data);
+      util.userReadAll('/users Read all success', data);
     });
   });
 
@@ -25,7 +25,7 @@ module.exports = (express) => {
       util.debug('/users/:id Read one user by id error', err);
     }, (data) => {
       res.status(200).json(data);
-      util.debug('/users/:id Read one user by id success', data);
+      util.userProperties('/users/:id Read one user by id success', data);
     });
   });
 
@@ -38,7 +38,7 @@ module.exports = (express) => {
       util.debug('/users/:id Delete one user by id error', err);
     }, (data) => {
       res.status(200).json(data);
-      util.debug('/users/:id Delete one user by id success', data);
+      util.userProperties('/users/:id Delete one user by id success', data);
     });
   });
 
@@ -51,7 +51,7 @@ module.exports = (express) => {
       util.debug('/users/:id Update one user by id error', err);
     }, (data) => {
       res.status(200).json(data);
-      util.debug('/users/:id Update one user by id success', data);
+      util.userProperties('/users/:id Update one user by id success', data);
     });
   });
 
@@ -62,7 +62,7 @@ module.exports = (express) => {
       util.debug('/users Create user error', err);
     }, (data) => {
       res.status(200).json(data);
-      util.debug('/users Create user success', data);
+      util.userProperties('/users Create user success', data);
     });
   });
 
@@ -73,7 +73,7 @@ module.exports = (express) => {
       util.debug('/apps Read all apps error', err);
     }, (data) => {
       res.status(200).json(data);
-      util.debug('/apps Read all apps success', data);
+      util.appReadAll('/apps Read all apps success', data);
     });
   });
 
@@ -86,7 +86,7 @@ module.exports = (express) => {
       util.debug('/apps/:id Read one app by id error', err);
     }, (data) => {
       res.status(200).json(data);
-      util.debug('/apps/:id Read one app by id success', data);
+      util.appProperties('/apps/:id Read one app by id success', data);
     });
   });
 
@@ -99,7 +99,7 @@ module.exports = (express) => {
       util.debug('/apps/:id Delete app by id error', err);
     }, (data) => {
       res.status(200).json(data);
-      util.debug('/apps/:id Delete app by id success', data);
+      util.appProperties('/apps/:id Delete app by id success', data);
     });
   });
 
@@ -113,18 +113,18 @@ module.exports = (express) => {
       util.debug('/apps/:id Update user by id error', err);
     }, (data) => {
       res.status(200).json(data);
-      util.debug('/apps/:id Update user by id success', data);
+      util.appProperties('/apps/:id Update user by id success', data);
     });
   });
 
-  // Create User
+  // Create App
   router.post('/apps', (req, res) => {
     apps.create(req.body, (err) => {
       res.status(500).json(err);
       util.debug('/apps Create app error', err);
     }, (data) => {
       res.status(200).json(data);
-      util.debug('/apps Create app success', data);
+      util.appProperties('/apps Create app success', data);
     });
   });
 

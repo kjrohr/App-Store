@@ -11,7 +11,7 @@ const util = require('../lib/util.js');
 const app = express();
 
 // Sets port to 3000
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Allows the app to use the body parser module to parse body data like req.body
 app.use(bodyParser.json());

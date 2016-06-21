@@ -1,6 +1,6 @@
 const expect = require('chai').expect;
 const apps = require('../src/models/apps');
-const util = require('../lib/util');
+const util = require('rohr_karl_utility');
 
 let testApp = {};
 

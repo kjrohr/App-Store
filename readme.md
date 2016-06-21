@@ -76,6 +76,31 @@ If a unit test fails it will display what broke and where.
 
 ```
 
+## PUT - Add an App - /api/apps
+### Please use the postman application for this.
+
+``` javascript
+{
+  "name": "Heroes of the Storm",
+  "code": "blizz"
+}
+```
+
+## PUT - Update an App by id - /api/apps/1
+### Please use the postman application for this.
+
+``` javascript
+{
+  "name": "Doom 4",
+  "code": "id"
+}
+```
+
+## DELETE - Delete an App by id - /api/apps/5
+### Please use the postman application for this.
+
+In post man select DELETE from the drop down, and type in the url to the app you would like to delete.
+
 ## GET - All Users - /api/users
 ``` javascript
 [
@@ -112,3 +137,30 @@ If a unit test fails it will display what broke and where.
   updatedAt: "2016-06-09T02:26:14.000Z"
 }
 ```
+
+## PUT - Add a User - /api/users
+### Please use the postman application for this.
+
+``` javascript
+{
+  "name": "Trent Reznor",
+  "age": 51,
+  "hobby" "Creating music"
+}
+```
+
+## PUT - Update a User - /api/users/3
+### Please use the postman application for this.
+
+``` javascript
+{
+  "name": "Lindsay",
+  "age": 22,
+  "hobby": "The Witcher"
+}
+```
+
+## DELETE - Delete a User by id - /api/users/39
+### Please use the postman application for this.
+
+In post man select DELETE from the drop down, and type in the url to the user you would like to delete.

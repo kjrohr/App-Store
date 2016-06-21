@@ -1,9 +1,8 @@
 // Variable db set to the db.js file
 // Testing
 const db = require('./db.js');
-// Variable util set to the util file
-const util = require('../../lib/util');
-
+// Variable util set to the rohr_karl_utility file
+const util = require('rohr_karl_utility');
 // Exports the create method
 exports.create = (payload, err, success) => {
   // Functions of the create method, the sequelize create, accepts payload,

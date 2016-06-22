@@ -69,7 +69,11 @@ In the command line, type in git merge featureBranch. This will put all the reba
 In the command line, type git tag -a vx.x. Replace the x's with the appropriate numbers for your project.
 
 ### 9. Push Your Code
-Int the command line, type git push github release. 'github' is an alias for my remote, and 'release' is my release branch. This will push your code to your remote repo.
+In the command line, type git push github release. 'github' is an alias for my remote, and 'release' is my release branch. This will push your code to your remote repo.
+
+### 10. Push Your Tag
+In the command line, type git push github release --tag.
+'github' is an alias for my remote, 'release' is my release branch. This will push your code with a tagged release to your remote repo.
 
 
 # ENDPOINTS

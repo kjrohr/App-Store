@@ -1,6 +1,6 @@
 const user = require('../models/user');
 const apps = require('../models/apps');
-const util = require('../../lib/util');
+const util = require('rohr_karl_utility');
 module.exports = (express) => {
   const router = express.Router();
 

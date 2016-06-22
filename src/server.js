@@ -5,7 +5,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 // Sets the util varaible to the util.js file
-const util = require('../lib/util.js');
+const util = require('rohr_karl_utility');
 
 // Sets app to the express
 const app = express();

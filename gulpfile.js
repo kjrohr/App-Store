@@ -15,7 +15,7 @@ gulp.task('bump', () => {
 gulp.task('add', () => {
   console.log('eslint does not like just a return');
   return gulp.src('./git-test/*')
-    .pipe(git.add());
+    .pipe(git.add({ args: ' -A' }));
 });
 
 gulp.task('commit', () => {

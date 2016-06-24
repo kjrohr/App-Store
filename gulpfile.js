@@ -37,3 +37,5 @@ gulp.task('hello', () => {
 gulp.task('default', ['add', 'commit', 'push'], () => {
   console.log('default');
 });
+
+// aslkajsdlkjasdlkj

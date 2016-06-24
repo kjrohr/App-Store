@@ -12,6 +12,8 @@ gulp.task('bump', () => {
 
 });
 
+// sdfsdf
+
 gulp.task('add', () => {
   console.log('Adding \n');
   return gulp.src('./git-test/*')
@@ -26,7 +28,7 @@ gulp.task('commit', ['add'], () => {
 
 gulp.task('tag', ['commit'], () => {
   console.log('tagging \n');
-  git.tag('v1.9.1', 'Version message', (err) => {
+  git.tag('v1.9.2', 'Version message', (err) => {
     if (err) throw err;
   });
 });

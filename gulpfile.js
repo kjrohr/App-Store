@@ -12,7 +12,7 @@ gulp.task('bump', () => {
 
 });
 
-// sdfsdf
+// sdfsdfasd
 
 gulp.task('add', () => {
   console.log('Adding \n');
@@ -28,7 +28,7 @@ gulp.task('commit', ['add'], () => {
 
 gulp.task('tag', ['commit'], () => {
   console.log('tagging \n');
-  git.tag('v1.9.2', 'Version message', (err) => {
+  git.tag('v1.9.3', 'Version message', (err) => {
     if (err) throw err;
   });
 });

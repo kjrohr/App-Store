@@ -13,18 +13,19 @@ gulp.task('bump', () => {
 });
 
 gulp.task('add', () => {
-  console.log('eslint does not like just a return');
+  console.log('Adding \n');
   return gulp.src('./git-test/*')
     .pipe(git.add({ args: ' -A' }));
 });
 
 gulp.task('commit', () => {
-  console.log('eslint does not like just a return');
+  console.log('Commiting \n');
   return gulp.src('./*')
     .pipe(git.commit('gulp commit'));
 });
 
 gulp.task('push', () => {
+  console.log('Pushing \n');
   git.push('github', 'gulptask', (err) => {
     if (err) throw err;
   });

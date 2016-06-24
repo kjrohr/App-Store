@@ -25,7 +25,7 @@ gulp.task('commit', () => {
 });
 
 gulp.task('push', () => {
-  git.push('github', 'release', (err) => {
+  git.push('github', 'gulptask', (err) => {
     if (err) throw err;
   });
 });

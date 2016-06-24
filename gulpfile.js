@@ -33,7 +33,7 @@ gulp.task('tag', ['commit'], () => {
 
 gulp.task('push', ['tag'], () => {
   console.log('Pushing \n');
-  git.push('github', 'gulptask', (err) => {
+  git.push('github', 'gulptask', { args: ' --tags'}, (err) => {
     if (err) throw err;
   });
 });

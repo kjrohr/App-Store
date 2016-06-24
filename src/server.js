@@ -27,5 +27,3 @@ const server = app.listen(port, () => {
 
 // exports the server as variable to be used when this file is included
 module.exports = server;
-
-// Testing sdfhkdfghkjsdhfkjhsdfskjsdfjsdfkjhsdfasd

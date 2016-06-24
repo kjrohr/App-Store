@@ -1,7 +1,6 @@
 const db = require('./db.js');
 const util = require('rohr_karl_utility');
 
-// Testing sdfhkdfghkjsdhfkjhsdfskjsdfjsdfkjhsdfasd
 exports.create = (payload, err, success) => {
   db.user.create(payload).then(success).catch(err);
   util.debug('Model - User - Create: ', payload);

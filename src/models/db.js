@@ -1,5 +1,5 @@
 // Variable Sequelize set to import the sequelize module
-// Testing sdfhkdfghkjsdhfkjhsdfskjsdfjsdfkjhsdfasd
+
 const Sequelize = require('sequelize');
 // Requiring the dotenv.config() method of the dotenv module
 if (!process.env.DB_HOST) {

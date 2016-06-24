@@ -31,9 +31,16 @@ gulp.task('tag', ['commit'], () => {
   });
 });
 
-gulp.task('push', ['tag'], () => {
+gulp.task('push', () => {
   console.log('Pushing \n');
-  git.push('github', 'gulptask', { args: ' --tags'}, (err) => {
+  git.push('github', 'gulptask', (err) => {
+    if (err) throw err;
+  });
+});
+
+gulp.task('push-tag', ['push'], () => {
+  console.log('Pushing \n');
+  git.push('github', 'gulptask', { args: ' --tags' }, (err) => {
     if (err) throw err;
   });
 });
@@ -42,6 +49,6 @@ gulp.task('hello', () => {
   console.log('hello');
 });
 
-gulp.task('default', ['add', 'commit', 'tag', 'push'], () => {
+gulp.task('default', ['add', 'commit', 'tag', 'push', 'push-tag'], () => {
   console.log('Finishing push test blah');
 });

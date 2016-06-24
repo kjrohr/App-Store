@@ -36,7 +36,7 @@ gulp.task('hello', () => {
 });
 
 gulp.task('default', ['add', 'commit', 'push'], () => {
-  console.log('Finishing push');
+  console.log('Finishing push test');
 });
 
 // aslkajsdlkjasdlkjasdasdasdkjhdsfkjh

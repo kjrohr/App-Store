@@ -26,7 +26,7 @@ gulp.task('commit', ['add'], () => {
 
 gulp.task('tag', ['commit'], () => {
   console.log('tagging \n');
-  git.tag('v1.8.1', 'Version message', (err) => {
+  git.tag('v1.8.2', 'Version message', (err) => {
     if (err) throw err;
   });
 });

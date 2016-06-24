@@ -18,13 +18,13 @@ gulp.task('add', () => {
     .pipe(git.add({ args: ' -A' }));
 });
 
-gulp.task('commit', () => {
+gulp.task('commit', ['add'], () => {
   console.log('Commiting \n');
   return gulp.src('./*')
     .pipe(git.commit('gulp commit'));
 });
 
-gulp.task('push', () => {
+gulp.task('push', ['commit'], () => {
   console.log('Pushing \n');
   git.push('github', 'gulptask', (err) => {
     if (err) throw err;

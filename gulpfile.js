@@ -21,7 +21,7 @@ gulp.task('add', () => {
 gulp.task('commit', () => {
   console.log('eslint does not like just a return');
   return gulp.src('./*')
-    .pipe(git.commit('initial commit'));
+    .pipe(git.commit('gulp commit'));
 });
 
 gulp.task('push', () => {

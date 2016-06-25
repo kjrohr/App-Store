@@ -28,12 +28,12 @@ gulp.task('commit', ['add'], () => {
 
 gulp.task('tag', ['commit'], () => {
   console.log('tagging \n');
-  git.tag('v1.9.4', 'Version message', (err) => {
+  git.tag('v1.9.5', 'Version message', (err) => {
     if (err) throw err;
   });
 });
 
-gulp.task('push', () => {
+gulp.task('push', ['tag'], () => {
   console.log('Pushing \n');
   git.push('github', 'gulptask', (err) => {
     if (err) throw err;

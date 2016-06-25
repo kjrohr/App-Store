@@ -23,7 +23,7 @@ gulp.task('add', () => {
 gulp.task('commit', ['add'], () => {
   console.log('Commiting \n');
   return gulp.src('./*')
-    .pipe(git.commit('gulp commit'));
+    .pipe(git.commit('gulp commit jio'));
 });
 
 gulp.task('tag', ['commit'], () => {
@@ -33,14 +33,14 @@ gulp.task('tag', ['commit'], () => {
   });
 });
 
-gulp.task('push', ['tag'], () => {
-  console.log('Pushing \n');
-  git.push('github', 'gulptask', (err) => {
-    if (err) throw err;
-  });
-});
+// gulp.task('push', ['tag'], () => {
+//   console.log('Pushing \n');
+//   git.push('github', 'gulptask', (err) => {
+//     if (err) throw err;
+//   });
+// });
 
-gulp.task('push-tag', ['push'], () => {
+gulp.task('push-tag', ['tag'], () => {
   console.log('Pushing \n');
   git.push('github', 'gulptask', { args: ' --tags' }, (err) => {
     if (err) throw err;
@@ -51,6 +51,6 @@ gulp.task('hello', () => {
   console.log('hello');
 });
 
-gulp.task('default', ['add', 'commit', 'tag', 'push', 'push-tag'], () => {
+gulp.task('default', ['add', 'commit', 'tag', 'push-tag'], () => {
   console.log('Finishing push test blah');
 });
